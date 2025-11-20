@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "frontend/dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": null,
+  "functions": {
+    "api/**/*.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  }
+}
