@@ -42,9 +42,9 @@ const Contact = () => {
             <p className="contact-text">Start by <span className="highlight-text">saying hi</span></p>
             <div className="contact-details">
               <p className="contact-label">Information</p>
-              <p className="contact-value">Binjan</p>
-              <p className="contact-value">+880 123 456 789</p>
-              <p className="contact-value">binjan85@gmail.com</p>
+              <p className="contact-value">Abrar Junaed</p>
+              <p className="contact-value">+880 1768002207</p>
+              <p className="contact-value">abrarjunaed22@gmail.com</p>
             </div>
           </div>
           <form onSubmit={handleSubmit} className="contact-form">
@@ -85,6 +85,8 @@ const Contact = () => {
             {status === 'error' && <p className="status error">Failed to send message. Please try again.</p>}
           </form>
         </div>
+        
+        
       </div>
     </section>
   );

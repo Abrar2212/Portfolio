@@ -3,21 +3,21 @@ import './About.css';
 const About = () => {
   const services = [
     {
-      icon: 'W',
-      title: 'Website Design',
-      count: '76 Projects',
+      icon: '⚛️',
+      title: 'Frontend Development',
+      count: '5 Projects',
       color: '#2D8B8B'
     },
     {
-      icon: 'M',
-      title: 'Mobile App Design',
-      count: '63 Projects',
+      icon: '⚙️',
+      title: 'Backend Development',
+      count: '6 Projects',
       color: '#F4C430'
     },
     {
-      icon: 'B',
-      title: 'Brand Identity',
-      count: '47 Projects',
+      icon: '🚀',
+      title: 'Full Stack Solutions',
+      count: '1 Projects',
       color: '#FF6B6B'
     }
   ];
@@ -38,20 +38,23 @@ const About = () => {
             ))}
           </div>
           <div className="about-description">
-            <h2 className="section-title">What do I help?</h2>
+            <h2 className="section-title">Full Stack Developer Extraordinaire</h2>
             <p className="description-text">
-              I will help you with finding a solution and solve your problems. We use process design to create digital products. Besides that also help their business.
+              As a seasoned <strong>Full Stack Developer</strong>, I craft exceptional digital experiences from frontend to backend. I specialize in building robust, scalable applications that seamlessly integrate beautiful user interfaces with powerful server-side architecture.
             </p>
             <p className="description-text">
-              We use process design to create digital products. Besides that also help their business.
+              My expertise spans modern frontend frameworks like <strong>React</strong> and <strong>Vue.js</strong>, coupled with backend mastery in <strong>Node.js</strong>, <strong>Express</strong>, and database technologies. I architect complete solutions that not only look stunning but perform flawlessly under any load.
+            </p>
+            <p className="description-text">
+              Whether it's crafting pixel-perfect responsive designs, optimizing API performance, or implementing complex business logic, I deliver end-to-end solutions that exceed expectations and drive business growth.
             </p>
             <div className="about-stats">
               <div className="stat-box">
-                <div className="stat-number">285+</div>
+                <div className="stat-number">2+</div>
                 <div className="stat-label">Project Completed</div>
               </div>
               <div className="stat-box">
-                <div className="stat-number">190+</div>
+                <div className="stat-number">0+</div>
                 <div className="stat-label">Happy Clients</div>
               </div>
             </div>

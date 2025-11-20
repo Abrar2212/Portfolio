@@ -64,3 +64,26 @@
   color: var(--text-secondary);
   line-height: 1.7;
 }
+
+@media (max-width: 900px) {
+  .skills { padding: 4rem 0 }
+  .skills .section-title { font-size: 2rem }
+  .experience-card { gap: 1.5rem; padding: 2rem }
+}
+
+@media (max-width: 640px) {
+  .skills { padding: 3rem 0 }
+  .skills .section-title { font-size: 1.75rem }
+  .skills .section-subtitle { margin-bottom: 2.5rem; font-size: 0.95rem }
+  .experience-card { flex-direction: column; padding: 1.75rem; text-align: center }
+  .experience-icon { font-size: 2.5rem }
+  .experience-title { font-size: 1.3rem }
+  .experience-description { font-size: 0.95rem }
+}
+
+@media (max-width: 480px) {
+  .skills { padding: 2.5rem 0 }
+  .skills .section-title { font-size: 1.5rem }
+  .experience-card { padding: 1.5rem }
+  .experience-title { font-size: 1.2rem }
+}

@@ -1,0 +1,202 @@
+.education {
+  padding: 6rem 0;
+  background: var(--bg-secondary);
+}
+
+.education .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Education Section */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-teal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.education-institution {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.education-result {
+  font-size: 0.95rem;
+  color: var(--accent-teal);
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+}
+
+.education-year {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Achievements Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.achievement-card {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px var(--shadow);
+  border-color: var(--accent-teal);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.achievements-section { margin-top: 2rem }
+
+.achievement-icon i {
+  font-size: 2.4rem;
+  color: var(--accent-primary);
+}
+
+/* Education icon next to degree */
+.edu-icon { margin-right: 0.6rem; color: var(--accent-teal); }
+
+.achievement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.achievement-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.achievement-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.achievement-year {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .education { padding: 4rem 0 }
+  .education .section-title { font-size: 2rem }
+  .achievements-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem }
+}
+
+@media (max-width: 640px) {
+  .education { padding: 3rem 0 }
+  .education .section-title { font-size: 1.75rem; margin-bottom: 2.5rem }
+  .subsection-title { font-size: 1.5rem; margin-bottom: 1.5rem }
+  .education-item { padding: 1.5rem }
+  .education-degree { font-size: 1.15rem }
+  .education-header { flex-direction: column; align-items: flex-start }
+  .achievements-grid { grid-template-columns: 1fr; gap: 1.25rem }
+  .achievement-card { padding: 1.5rem }
+  .achievement-icon i { font-size: 2rem }
+  .achievement-title { font-size: 1.1rem }
+}
+
+@media (max-width: 480px) {
+  .education { padding: 2.5rem 0 }
+  .education .section-title { font-size: 1.5rem }
+  .subsection-title { font-size: 1.3rem }
+  .education-item { padding: 1.25rem }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education {
+    padding: 4rem 0;
+  }
+
+  .education .section-title {
+    font-size: 2rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  .education-content { grid-template-columns: 1fr; column-gap: 0; gap: 2rem }
+}

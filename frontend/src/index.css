@@ -14,13 +14,19 @@
   --text-primary: #1a1a1a;
   --text-secondary: #4a4a4a;
   --text-muted: #6a6a6a;
-  --accent-primary: #F4C430;
-  --accent-secondary: #FFD700;
+  --accent-primary: #14b8a6;
+  --accent-secondary: #06b6d4;
   --accent-teal: #2D8B8B;
   --accent-coral: #FF6B6B;
   --accent-orange: #FFB347;
   --border-color: #E5E5E5;
   --shadow: rgba(0, 0, 0, 0.08);
+  --header-height: 76px;
+  /* header-specific tokens (light theme) */
+  --header-bg: #FFF9F0;
+  --header-text: var(--text-primary);
+  --toggle-bg: rgba(0,0,0,0.06);
+  --toggle-border: rgba(0,0,0,0.08);
 }
 
 [data-theme="dark"] {
@@ -30,17 +36,27 @@
   --text-primary: #FFFFFF;
   --text-secondary: #D1D1D1;
   --text-muted: #A0A0A0;
-  --accent-primary: #F4C430;
-  --accent-secondary: #FFD700;
+  --accent-primary: #14b8a6;
+  --accent-secondary: #06b6d4;
   --accent-teal: #3DB8B8;
   --accent-coral: #FF8585;
   --accent-orange: #FFB347;
   --border-color: #2A2A2A;
   --shadow: rgba(255, 255, 255, 0.05);
+  /* header-specific tokens (dark theme) */
+  --header-bg: #000000;
+  --header-text: #ffffff;
+  --toggle-bg: rgba(255,255,255,0.10);
+  --toggle-border: rgba(255,255,255,0.18);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Ensure anchored sections are not hidden behind the fixed header */
+section[id], [id] {
+  scroll-margin-top: var(--header-height);
 }
 
 body {

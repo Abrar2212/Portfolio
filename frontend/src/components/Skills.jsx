@@ -3,22 +3,16 @@ import './Skills.css';
 const Skills = () => {
   const experience = [
     {
-      title: 'Full Employed',
-      company: 'Facebook Industry',
-      period: 'Jun 2019 - Aug 2021',
-      description: 'Lorem dimpson dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore…'
+      title: 'Senior Developer',
+      company: 'Sinapsis IT',
+      period: 'Nov 2025 - Present',
+      description: 'Leading full stack development projects, architecting scalable web applications, and mentoring junior developers in modern web technologies.'
     },
     {
-      title: 'UX/UI Designer',
-      company: 'Google Industry',
-      period: 'Jun 2021 - Present',
-      description: 'Lorem dimpson dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore…'
-    },
-    {
-      title: 'Sr. Product Designer',
-      company: 'Global Solution',
-      period: 'Jun 2019 - Aug 2021',
-      description: 'Lorem dimpson dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore…'
+      title: 'Full Stack Developer',
+      company: 'Twincle Company',
+      period: 'Jan 2025 - Present',
+      description: 'Developed and maintained web applications using React, Node.js, and Express. Collaborated with cross-functional teams to deliver high-quality solutions.'
     }
   ];
 
