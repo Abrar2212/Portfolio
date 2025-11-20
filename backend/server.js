@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
@@ -51,6 +53,23 @@ app.post('/api/contact', (req, res) => {
     message: 'Thank you for your message! I will get back to you soon.' 
   });
 });
+
+// Serve frontend build (if present) from ../frontend/dist so frontend and backend
+// can run on the same port in production. This should come before the 404 handler.
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
+
+try {
+  app.use(express.static(frontendDist));
+
+  // All other non-API routes should serve the SPA's index.html
+  app.get(/^\/(?!api).*/, (req, res) => {
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+} catch (e) {
+  // If dist doesn't exist, just continue (dev mode normally)
+}
 
 // 404 handler
 app.use((req, res) => {

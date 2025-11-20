@@ -30,9 +30,9 @@ const Footer = () => {
                 <a href="#education">Education</a>
               </div>
               <div className="nav-group">
-                <a href="#docs">Documentation</a>
-                <a href="#faq">FAQ</a>
-                <a href="#support">Support</a>
+                <a href="#contact">Contact</a>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://github.com/Abrar2212" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
               <div className="nav-group">
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">X (Twitter)</a>

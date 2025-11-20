@@ -3,16 +3,16 @@ import './Skills.css';
 
 const Tools = () => {
   const tools = [
-    { name: 'JavaScript', icon: 'fa-brands fa-js' },
+    { name: 'JavaScript', icon: 'fab fa-js' },
     { name: 'TypeScript', icon: 'fa-solid fa-code' },
-    { name: 'Node.js', icon: 'fa-brands fa-node-js' },
-    { name: 'Express', icon: 'fa-brands fa-node-js' },
-    { name: 'React', icon: 'fa-brands fa-react' },
-   
-    { name: 'HTML', icon: 'fa-brands fa-html5' },
-    { name: 'CSS', icon: 'fa-brands fa-css3-alt' },
-    { name: 'Git', icon: 'fa-brands fa-git-alt' },
-  { name: 'Spring Boot', icon: 'fa-solid fa-seedling' },
+    { name: 'Node.js', icon: 'fab fa-node-js' },
+    { name: 'Express', icon: 'fab fa-node-js' },
+    { name: 'React', icon: 'fab fa-react' },
+
+    { name: 'HTML', icon: 'fab fa-html5' },
+    { name: 'CSS', icon: 'fab fa-css3-alt' },
+    { name: 'Git', icon: 'fab fa-git-alt' },
+    { name: 'Spring Boot', icon: 'fa-solid fa-seedling' },
     { name: 'MongoDB', icon: 'fa-solid fa-leaf' },
     { name: 'SQL', icon: 'fa-solid fa-database' }
   
