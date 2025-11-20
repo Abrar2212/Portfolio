@@ -4,7 +4,7 @@ const Skills = () => {
   const experience = [
     {
       title: 'Senior Developer',
-      company: 'Sinapsis IT',
+      company: 'SinapsisIT',
       period: 'Nov 2025 - Present',
       description: 'Leading full stack development projects, architecting scalable web applications, and mentoring junior developers in modern web technologies.'
     },

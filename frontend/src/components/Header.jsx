@@ -14,6 +14,21 @@ const Header = () => {
     return () => window.removeEventListener('hashchange', closeMenu);
   }, []);
 
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    const el = document.getElementById(id);
+    const headerEl = document.getElementById('site-header');
+    const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
+      window.history.replaceState(null, '', `#${id}`);
+    } else {
+      window.location.hash = id;
+    }
+  };
+
   useEffect(() => {
     // lock body scroll when mobile menu is open
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -36,12 +51,13 @@ const Header = () => {
 
         <div className="header-content container">
           <nav className={`nav ${mobileOpen ? 'open' : ''}`}>
-            <a href="#home" onClick={() => setMobileOpen(false)}>Home</a>
-            <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
-            <a href="#tools" onClick={() => setMobileOpen(false)}>Skills</a>
-            <a href="#projects" onClick={() => setMobileOpen(false)}>Projects</a>
-            <a href="#education" onClick={() => setMobileOpen(false)}>Education</a>
-            <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
+            <a href="#tools" onClick={(e) => handleNavClick(e, 'tools')}>Skills</a>
+            <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a>
+            <a href="#education" onClick={(e) => handleNavClick(e, 'education')}>Education</a>
+            <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>Experience</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
           </nav>
         </div>
 
