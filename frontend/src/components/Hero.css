@@ -61,6 +61,23 @@
   margin-top: 3rem;
 }
 
+.stat-note {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  justify-content: center;
+}
+
+.stat-note .note-line {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+
 .badge-circle {
   width: 80px;
   height: 80px;
@@ -191,5 +208,5 @@
 }
 
 /* Subtle motion for shapes to bring life without heavy work */
-.shape { transition: transform 600ms ease; }
-.shape:hover { transform: translateY(-6px) rotate(3deg); }
+.shape { transition: transform 1200ms cubic-bezier(.2,.8,.2,1); }
+.shape:hover { transform: translateY(-4px) rotate(2deg); }

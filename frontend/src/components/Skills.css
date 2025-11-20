@@ -1,6 +1,6 @@
 .skills {
   padding: 6rem 0;
-  background-color: var(--bg-secondary);
+  /* background-color: var(--bg-secondary); */
 }
 
 .skills .section-title {
@@ -65,10 +65,30 @@
   line-height: 1.7;
 }
 
+/* Tools & Technologies subsection */
+.tools-section { margin-top: 3.5rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.tools-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.25rem; }
+.tools-sub { color: var(--text-muted); margin-bottom: 1rem; }
+.tools-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.tool-chip { background: var(--bg-card); color: var(--text-primary); padding: 0.6rem 0.9rem; border-radius: 999px; font-weight: 600; border: 1px solid var(--border-color); box-shadow: 0 6px 18px var(--shadow); }
+.tool-chip { display:inline-flex; align-items:center; gap:0.6rem; background: var(--bg-card); color: var(--text-primary); padding: 0.6rem 0.9rem; border-radius: 999px; font-weight: 600; border: 1px solid var(--border-color); box-shadow: 0 6px 18px var(--shadow); transition: transform 220ms cubic-bezier(.2,.8,.2,1), background-color 220ms ease, color 220ms ease, box-shadow 220ms ease; }
+.tool-chip .tool-icon { font-size: 0.95rem; width:18px; text-align:center; color: var(--text-secondary); }
+.tool-chip .tool-name { display:inline-block; font-size:0.95rem; }
+
+/* Hover / focus effect: accent background and light text */
+.tool-chip:hover, .tool-chip:focus {
+  transform: translateY(-4px) scale(1.04);
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+.tool-chip:hover .tool-icon, .tool-chip:focus .tool-icon { color: #fff; }
+
 @media (max-width: 900px) {
   .skills { padding: 4rem 0 }
   .skills .section-title { font-size: 2rem }
   .experience-card { gap: 1.5rem; padding: 2rem }
+  .tools-grid { justify-content: center; }
 }
 
 @media (max-width: 640px) {
@@ -79,6 +99,8 @@
   .experience-icon { font-size: 2.5rem }
   .experience-title { font-size: 1.3rem }
   .experience-description { font-size: 0.95rem }
+  .tools-grid { justify-content: center; }
+  .tool-chip { font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {

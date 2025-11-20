@@ -10,12 +10,18 @@ const Hero = () => {
         const animateShape = () => {
           anime({
             targets: shape,
-            translateX: anime.random(-100, 100),
-            translateY: anime.random(-100, 100),
+            translateX: anime.random(-120, 120),
+            translateY: anime.random(-120, 120),
             rotate: anime.random(-180, 180),
-            duration: anime.random(2000, 3000),
-            easing: 'easeInOutSine',
-            complete: animateShape
+            // slower duration for calmer motion
+            duration: anime.random(5000, 8500),
+            easing: 'easeInOutQuad',
+            // small random delay between repeats for breathing room
+            delay: anime.random(200, 800),
+            complete: () => {
+              // add a short pause before restarting the animation
+              setTimeout(animateShape, anime.random(250, 700));
+            }
           });
         };
         animateShape();
@@ -41,18 +47,9 @@ const Hero = () => {
                 <div className="stat-number">1</div>
                 <div className="stat-label">Years<br />Experience</div>
               </div>
-            </div>
-            <div className="hero-badge">
-              <div className="badge-circle">
-                <svg viewBox="0 0 100 100" className="badge-icon">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M50 20 L60 45 L85 45 L65 60 L75 85 L50 70 L25 85 L35 60 L15 45 L40 45 Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <div className="badge-text">
-                <div className="badge-title"></div>
-                <div className="badge-subtitle">PROFESSIONAL</div>
-                <div className="badge-subtitle">BACKEND-DEVELOPER</div>
+              <div className="stat-note">
+                <div className="note-line">PROFESSIONAL</div>
+                <div className="note-line">BACKEND-DEVELOPER</div>
               </div>
             </div>
           </div>

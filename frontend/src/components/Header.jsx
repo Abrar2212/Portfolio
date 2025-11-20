@@ -37,9 +37,10 @@ const Header = () => {
         <div className="header-content container">
           <nav className={`nav ${mobileOpen ? 'open' : ''}`}>
             <a href="#home" onClick={() => setMobileOpen(false)}>Home</a>
-            <a href="#works" onClick={() => setMobileOpen(false)}>Works</a>
+            <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
+            <a href="#tools" onClick={() => setMobileOpen(false)}>Skills</a>
+            <a href="#projects" onClick={() => setMobileOpen(false)}>Projects</a>
             <a href="#education" onClick={() => setMobileOpen(false)}>Education</a>
-            <a href="#experience" onClick={() => setMobileOpen(false)}>Experience</a>
             <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
           </nav>
         </div>
