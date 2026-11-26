@@ -6,11 +6,8 @@ const projectsData = [
     title: 'PrintX3D',
     subtitle: '3D Keychain Customizer & Order Platform',
     category: 'fullstack',
-    badge: 'Live App + WP Plugin',
-    color: '#2563EB',
-    iconClass: 'fa-solid fa-cubes',
     description:
-      'Custom 3D keychain ordering web app where customers type multi-line text, pick fonts and dual-filament colors with a live Three.js preview, while staff download print-ready procedural STL files. Also includes an embeddable WordPress customizer plugin.',
+      'Custom 3D keychain ordering web app where customers type multi-line text, pick fonts and dual-filament colors with a live Three.js preview, while staff download print-ready procedural STL files. Includes an embeddable WordPress customizer plugin.',
     tech: ['Next.js 16', 'React 19', 'Three.js / R3F', 'Prisma', 'PostgreSQL', 'WordPress'],
     liveUrl: 'https://printx3d.onrender.com',
     repoUrl: 'https://github.com/Abrar2212/Printx3d'
@@ -19,23 +16,17 @@ const projectsData = [
     title: 'LearnMatrix',
     subtitle: 'Gamified Learning & Code Practice Platform',
     category: 'backend',
-    badge: 'Spring Boot + React',
-    color: '#7C3AED',
-    iconClass: 'fa-solid fa-graduation-cap',
     description:
-      'Full-stack learning platform offering interactive courses, quizzes, an integrated Monaco code editor, community Q&A, peer challenges, and XP/coins/leaderboard gamification with JWT and Google OAuth2 sign-in.',
-    tech: ['Spring Boot 3', 'Java 21', 'React', 'TypeScript', 'Monaco Editor', 'MySQL', 'OAuth2'],
+      'Full-stack learning platform offering interactive courses, quizzes, an integrated Monaco code editor, community Q&A, peer challenges, and XP/coins/leaderboard tracking with JWT and Google OAuth2 sign-in.',
+    tech: ['Spring Boot 3', 'Java 21', 'React', 'TypeScript', 'Monaco Editor', 'MySQL'],
     repoUrl: 'https://github.com/Abrar2212/LearnMatrix'
   },
   {
     title: 'Skill Binimoy',
-    subtitle: 'Peer-to-Peer Skill Exchange & Mentorship Platform',
+    subtitle: 'Peer-to-Peer Skill Exchange Marketplace',
     category: 'fullstack',
-    badge: 'Full-Stack Web App',
-    color: '#10B981',
-    iconClass: 'fa-solid fa-people-arrows',
     description:
-      'Community skill-barter marketplace where members exchange teaching and learning proposals without tuition fees, featuring 1-on-1 Jitsi video sessions, real-time messaging, and an AI learning assistant.',
+      'Community skill-barter platform where members exchange teaching and learning proposals without tuition fees, featuring 1-on-1 Jitsi video sessions, real-time messaging, and an AI study assistant.',
     tech: ['React 19', 'TypeScript', 'Node.js', 'Express', 'Firebase', 'GSAP'],
     repoUrl: 'https://github.com/Abrar2212/Skill_Binimoy'
   },
@@ -43,78 +34,60 @@ const projectsData = [
     title: 'Starry-Wrap',
     subtitle: 'Inventory & Product Management Dashboard',
     category: 'backend',
-    badge: 'Full-Stack Dashboard',
-    color: '#0891B2',
-    iconClass: 'fa-solid fa-boxes-stacked',
     description:
-      'Full-stack inventory and catalog management dashboard featuring optimistic UI state updates, concurrent Cloudinary multi-image uploads, stock tracking, HTTP-only cookie JWT auth, and 6-digit email OTP verification.',
+      'Full-stack inventory and catalog dashboard featuring optimistic UI updates, concurrent Cloudinary multi-image uploads, stock tracking, HTTP-only cookie JWT authentication, and email OTP verification.',
     tech: ['React 19', 'TypeScript', 'Express 5', 'PostgreSQL', 'Cloudinary', 'JWT'],
     repoUrl: 'https://github.com/Abrar2212/Starry-Wrap'
   },
   {
     title: 'Non-Visual Confidence Recall',
-    subtitle: 'Assistive Egocentric Episodic Memory AI (FYDP)',
+    subtitle: 'Assistive Episodic Memory AI (FYDP)',
     category: 'ai',
-    badge: 'FYDP Prototype',
-    color: '#8B5CF6',
-    iconClass: 'fa-solid fa-brain',
     description:
-      'Final Year Design Project developing calibrated non-visual confidence communication for blind and low-vision smart-glass users using temporal video segmentation, semantic indexing, and Google Gemini VLMs.',
-    tech: ['Python', 'Google Gemini VLM', 'OpenCV', 'Scikit-Learn', 'TF-IDF Retrieval']
+      'Final Year Design Project developing calibrated non-visual confidence communication for blind and low-vision smart-glass users via temporal video segmentation, semantic indexing, and Google Gemini VLMs.',
+    tech: ['Python', 'Google Gemini VLM', 'OpenCV', 'Scikit-Learn']
   },
   {
     title: 'Autonomous Service Robot',
-    subtitle: 'Vision-Guided Restaurant Table Delivery Robot',
+    subtitle: 'Vision-Guided Table Delivery Robot',
     category: 'ai',
-    badge: 'Robotics & OpenCV',
-    color: '#EC4899',
-    iconClass: 'fa-solid fa-robot',
     description:
-      'Hardware-software restaurant delivery robot integrating a Raspberry Pi 5 camera subsystem (OpenCV ArUco marker table detection) with an Arduino Nano IR-sensor line-following motor controller.',
-    tech: ['C++', 'Python', 'OpenCV (ArUco)', 'Raspberry Pi 5', 'Arduino Nano'],
+      'Hardware-software restaurant delivery robot combining a Raspberry Pi 5 camera module (OpenCV ArUco marker table recognition) with an Arduino Nano IR-sensor line-following motor controller.',
+    tech: ['C++', 'Python', 'OpenCV', 'Raspberry Pi 5', 'Arduino Nano'],
     repoUrl: 'https://github.com/Abrar2212/Autonomous-Restaurant-Service-Robot'
   },
   {
     title: 'Scholarship Scout',
-    subtitle: 'AI University & Scholarship Research Assistant',
+    subtitle: 'AI University & Scholarship Research Tool',
     category: 'ai',
-    badge: 'In-Progress App',
-    color: '#0EA5E9',
-    iconClass: 'fa-solid fa-magnifying-glass',
     description:
-      'Web application that researches official university and scholarship pages, compares requirements against a saved student study profile with source citations, and prepares user-reviewed Gmail enquiry drafts.',
+      'Web application that inspects official university and scholarship pages, checks eligibility requirements against a saved student profile with source links, and prepares user-reviewed Gmail drafts.',
     tech: ['Next.js 16', 'Gemini API', 'Prisma', 'PostgreSQL', 'NextAuth', 'Gmail API']
   },
   {
     title: 'Qasar',
-    subtitle: 'Modular E-Commerce Storefront & Backend',
+    subtitle: 'Modular E-Commerce Storefront & API',
     category: 'backend',
-    badge: 'NestJS + React',
-    color: '#F59E0B',
-    iconClass: 'fa-solid fa-gem',
     description:
-      'Perfume e-commerce system organized as a modular NestJS backend (Auth, Products, Inventory, Cart, Orders, Payments, and Admin modules) paired with a responsive React 19 + TypeScript storefront.',
+      'Perfume e-commerce platform structured as a modular NestJS backend (Auth, Products, Inventory, Cart, Orders, Payments, and Admin) paired with a React 19 + TypeScript storefront.',
     tech: ['NestJS', 'React 19', 'TypeScript', 'PostgreSQL', 'GSAP']
   },
   {
     title: 'Home Hunt',
-    subtitle: 'Real Estate & House Rental Web Application',
+    subtitle: 'Real Estate & House Rental Web App',
     category: 'fullstack',
-    badge: 'DBMS Web Project',
-    color: '#F97316',
-    iconClass: 'fa-solid fa-house',
     description:
-      'Property search and rental listing platform featuring user authentication, multi-criteria property search filters, and an admin CRUD management dashboard.',
+      'Property search and rental listing web application supporting user authentication, multi-criteria property filters, and an admin CRUD management dashboard.',
     tech: ['PHP', 'MySQL', 'React', 'Node.js'],
     repoUrl: 'https://github.com/Abrar2212/Home-Hunt'
   }
 ];
 
 const categories = [
-  { id: 'all', label: 'All Projects (9)' },
-  { id: 'fullstack', label: 'Full-Stack & 3D Web' },
+  { id: 'all', label: 'All (9)' },
+  { id: 'fullstack', label: 'Web & 3D' },
   { id: 'backend', label: 'Backend & Systems' },
-  { id: 'ai', label: 'AI, Vision & Robotics' }
+  { id: 'ai', label: 'AI & Robotics' }
 ];
 
 const Projects = () => {
@@ -130,20 +103,20 @@ const Projects = () => {
       <div className="container">
         <div className="projects-header">
           <div>
-            <span className="section-eyebrow">// 03 · Featured Work</span>
-            <h2 className="section-title">Selected Software &amp; Hardware Projects</h2>
+            <span className="section-index">03 / Selected Work</span>
+            <h2 className="section-title">Projects</h2>
             <p className="section-subtitle">
-              Full-stack web platforms, 3D customization studios, backend APIs, and academic AI/robotics builds.
+              Selected web applications, backend services, and academic research builds.
             </p>
           </div>
           <a
-            href="https://github.com/Abrar2212"
+            href="https://github.com/Abrar2212?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"
           >
             <i className="fa-brands fa-github" aria-hidden="true" />
-            <span>All Repositories</span>
+            <span>View All on GitHub</span>
           </a>
         </div>
 
@@ -163,63 +136,52 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, index) => (
             <article key={project.title} className="project-card">
-              <div className="project-accent" style={{ backgroundColor: project.color }} />
-              <div className="project-body">
-                <div className="project-card-head">
-                  <div
-                    className="project-icon-wrap"
-                    style={{ backgroundColor: `${project.color}16`, color: project.color }}
-                  >
-                    <i className={project.iconClass} aria-hidden="true" />
-                  </div>
-                  <span className="project-badge">{project.badge}</span>
-                </div>
-
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-subtitle-text">{project.subtitle}</p>
-                  <p className="project-description">{project.description}</p>
-                </div>
-
-                <div className="project-tech-list" aria-label={`${project.title} technologies`}>
-                  {project.tech.map((item) => (
-                    <span key={item} className="project-tech-pill">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="project-footer">
+              <div className="project-card-top">
+                <span className="project-index">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="project-links">
                   {project.liveUrl && (
                     <a
-                      className="project-action-btn primary"
+                      className="project-link"
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <span>Live</span>
                       <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
-                      <span>Live Demo</span>
                     </a>
                   )}
                   {project.repoUrl ? (
                     <a
-                      className="project-action-btn"
+                      className="project-link"
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fa-brands fa-github" aria-hidden="true" />
-                      <span>Repository</span>
+                      <span>Source</span>
+                      <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
                     </a>
                   ) : (
-                    <span className="project-private-tag">
-                      <i className="fa-solid fa-code-commit" aria-hidden="true" />
-                      <span>Local / Academic Repository</span>
-                    </span>
+                    <span className="project-status">Academic / Local</span>
                   )}
                 </div>
+              </div>
+
+              <div className="project-content">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-subtitle-text">{project.subtitle}</p>
+                <p className="project-description">{project.description}</p>
+              </div>
+
+              <div className="project-tech-list" aria-label={`${project.title} technologies`}>
+                {project.tech.map((item) => (
+                  <span key={item} className="project-tech-item">
+                    {item}
+                  </span>
+                ))}
               </div>
             </article>
           ))}

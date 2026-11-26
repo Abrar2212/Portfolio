@@ -1,4 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext';
+import ScrollBackground from './components/ScrollBackground';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,6 +14,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="app">
+        <ScrollBackground />
         <Header />
         <main>
           <Hero />

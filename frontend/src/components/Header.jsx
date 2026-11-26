@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { useTheme } from '../context/ThemeContext';
-import avatarSrc from '../assets/WhatsApp Image 2025-11-20 at 12.38.37 AM.jpeg';
+import portraitSrc from '../assets/WhatsApp Image 2025-11-20 at 12.38.37 AM1.jpeg';
 
 const navItems = [
-  { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'tools', label: 'Tech Stack' },
-  { id: 'projects', label: 'Projects' },
+  { id: 'tools', label: 'Stack' },
+  { id: 'projects', label: 'Work' },
   { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' }
 ];
@@ -15,21 +14,12 @@ const navItems = [
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const isDark = theme === 'dark';
 
   useEffect(() => {
     const closeMenu = () => setMobileOpen(false);
-    const onScroll = () => setScrolled(window.scrollY > 12);
-
     window.addEventListener('hashchange', closeMenu);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      window.removeEventListener('hashchange', closeMenu);
-      window.removeEventListener('scroll', onScroll);
-    };
+    return () => window.removeEventListener('hashchange', closeMenu);
   }, []);
 
   useEffect(() => {
@@ -44,7 +34,7 @@ const Header = () => {
     setMobileOpen(false);
     const el = document.getElementById(id);
     const headerEl = document.getElementById('site-header');
-    const headerHeight = headerEl ? headerEl.offsetHeight : 74;
+    const headerHeight = headerEl ? headerEl.offsetHeight : 68;
     if (el) {
       const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
       window.scrollTo({ top, behavior: 'smooth' });
@@ -55,21 +45,18 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`} id="site-header">
+    <header className="header" id="site-header">
       <div className="container header-inner">
         <a
           href="#home"
           className="brand-logo"
           onClick={(e) => handleNavClick(e, 'home')}
-          aria-label="Abrar Junaed — Back to top"
+          aria-label="Abrar Junaed — Home"
         >
-          <span className="avatar-ring">
-            <img src={avatarSrc} alt="Abrar Junaed" className="header-avatar" />
+          <span className="avatar-frame">
+            <img src={portraitSrc} alt="Abrar Junaed" className="header-avatar" />
           </span>
-          <span className="brand-text">
-            <span className="logo-name">Abrar Junaed</span>
-            <span className="logo-tag">&lt;AJ /&gt;</span>
-          </span>
+          <span className="logo-name">Abrar Junaed</span>
         </a>
 
         <nav className={`nav ${mobileOpen ? 'open' : ''}`} aria-label="Primary navigation">
@@ -85,7 +72,6 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          {/* Custom Vector Sun/Moon Theme Switch */}
           <button
             type="button"
             role="switch"
@@ -96,32 +82,26 @@ const Header = () => {
             onClick={toggleTheme}
           >
             <span className="theme-switch-track">
-              {/* Sun Vector Icon */}
-              <span className="switch-icon sun-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="4.5" />
-                  <path d="M12 2.5v2.2M12 19.3v2.2M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2.5 12h2.2M19.3 12h2.2M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" />
+              <span className="switch-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 3v2M12 19v2M5.64 5.64l1.41 1.41M16.95 16.95l1.41 1.41M3 12h2M19 12h2M5.64 18.36l1.41-1.41M16.95 7.05l1.41-1.41" />
                 </svg>
               </span>
-
-              {/* Moon & Star Vector Icon */}
-              <span className="switch-icon moon-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.003 9.003 0 0 0 12 21a9.003 9.003 0 0 0 8.354-5.646Z" />
-                  <path d="M18 4v3M16.5 5.5h3" strokeWidth="1.75" />
+              <span className="switch-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
               </span>
-
-              {/* Sliding Active Thumb with Crisp Mode Emblem */}
               <span className="theme-switch-thumb" aria-hidden="true">
                 {isDark ? (
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.003 9.003 0 0 0 12 21a9.003 9.003 0 0 0 8.354-5.646Z" />
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                   </svg>
                 ) : (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                    <circle cx="12" cy="12" r="4.5" fill="currentColor" />
-                    <path d="M12 2.5v2.2M12 19.3v2.2M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2.5 12h2.2M19.3 12h2.2M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" />
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 3v2M12 19v2M5.64 5.64l1.41 1.41M16.95 16.95l1.41 1.41M3 12h2M19 12h2M5.64 18.36l1.41-1.41M16.95 7.05l1.41-1.41" />
                   </svg>
                 )}
               </span>

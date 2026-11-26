@@ -2,28 +2,20 @@ import './About.css';
 
 const domains = [
   {
-    iconClass: 'fa-solid fa-cubes',
     title: 'Full-Stack & 3D Web',
-    summary: 'Interactive React 19 & Next.js 16 web apps, Three.js 3D previews, procedural STL export, and WordPress plugin integration.',
-    accent: '#2563EB'
+    summary: 'React 19 and Next.js 16 applications, interactive Three.js 3D previews, procedural STL generation, and WordPress plugin integration.'
   },
   {
-    iconClass: 'fa-solid fa-server',
-    title: 'Backend & REST APIs',
-    summary: 'Structured backend services using Spring Boot 3 (Java 21), NestJS, Node.js, and Express with JWT & OAuth 2.0 authentication.',
-    accent: '#0891B2'
+    title: 'Backend & API Design',
+    summary: 'Structured REST services using Spring Boot 3 (Java 21), NestJS, Node.js, and Express with JWT and OAuth 2.0 authentication.'
   },
   {
-    iconClass: 'fa-solid fa-database',
-    title: 'Databases & Cloud Storage',
-    summary: 'Relational and document data modeling with PostgreSQL, MySQL, MongoDB, Prisma ORM, Firebase Firestore, and Cloudinary.',
-    accent: '#7C3AED'
+    title: 'Databases & Cloud Media',
+    summary: 'Relational and document schema design across PostgreSQL, MySQL, MongoDB, Prisma ORM, Firebase Firestore, and Cloudinary.'
   },
   {
-    iconClass: 'fa-solid fa-microchip',
-    title: 'Applied AI, Vision & Robotics',
-    summary: 'Vision-language pipelines with Google Gemini API & OpenCV, AI research agents, and Raspberry Pi + Arduino robotics.',
-    accent: '#10B981'
+    title: 'Applied AI & Robotics',
+    summary: 'Multimodal vision pipelines with Google Gemini API and OpenCV, source-grounded AI research tools, and Raspberry Pi + Arduino robotics.'
   }
 ];
 
@@ -31,45 +23,35 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
-        <div className="about-header">
-          <span className="section-eyebrow">// 01 · About Me</span>
-          <h2 className="section-title">Focused on Clean Architecture &amp; Practical Problem Solving</h2>
-        </div>
-
-        <div className="about-content">
-          <div className="about-narrative">
+        <div className="about-layout">
+          <div className="about-left">
+            <span className="section-index">01 / About</span>
+            <h2 className="section-title">Practical engineering from schema to interface.</h2>
             <p className="description-text">
-              I&apos;m <strong>Abrar Junaed</strong>, an undergraduate studying{' '}
-              <strong>Computer Science &amp; Engineering at United International University (UIU)</strong>{' '}
-              in Dhaka, Bangladesh. I enjoy turning complex ideas into well-structured, maintainable
-              software across both frontend and backend stacks.
+              I am an undergraduate studying Computer Science &amp; Engineering at United
+              International University (UIU) in Dhaka. My work focuses on building clean,
+              maintainable software across modern TypeScript and Java stacks.
             </p>
             <p className="description-text">
-              My recent projects span custom <strong>3D web customization platforms</strong> with{' '}
-              <strong>Next.js 16 and Three.js</strong>, gamified learning systems built on{' '}
-              <strong>Spring Boot 3 and React</strong>, peer-to-peer skill exchange communities, and
-              full-stack inventory management dashboards.
+              Recently, I have built on-demand 3D customization tools with Next.js and Three.js, a
+              gamified learning and code-practice platform on Spring Boot and React, peer-to-peer
+              skill-sharing software, and full-stack inventory dashboards.
             </p>
             <p className="description-text">
-              Alongside web engineering, my Final Year Design Project (FYDP) explores{' '}
-              <strong>Calibrated Non-Visual Confidence Communication</strong> for assistive smart-glass
-              memory recall using <strong>Google Gemini Vision-Language Models</strong> and{' '}
-              <strong>OpenCV</strong>, complemented by hands-on hardware integration with{' '}
-              <strong>Raspberry Pi 5 and Arduino</strong>.
+              For my Final Year Design Project (FYDP), I am developing a calibrated non-visual
+              confidence communication pipeline for egocentric memory recall using Google Gemini
+              Vision-Language Models and OpenCV.
             </p>
           </div>
 
-          <div className="about-domains-grid">
-            {domains.map((domain) => (
-              <div key={domain.title} className="domain-bento-card">
-                <div
-                  className="domain-icon"
-                  style={{ backgroundColor: `${domain.accent}18`, color: domain.accent }}
-                >
-                  <i className={domain.iconClass} aria-hidden="true" />
+          <div className="about-domains">
+            {domains.map((domain, idx) => (
+              <div key={domain.title} className="domain-card">
+                <span className="domain-num">0{idx + 1}</span>
+                <div>
+                  <h3 className="domain-title">{domain.title}</h3>
+                  <p className="domain-summary">{domain.summary}</p>
                 </div>
-                <h3 className="domain-title">{domain.title}</h3>
-                <p className="domain-summary">{domain.summary}</p>
               </div>
             ))}
           </div>

@@ -3,45 +3,26 @@ import './Hero.css';
 const Hero = () => {
   return (
     <section id="home" className="hero">
-      <div className="hero-ambient" aria-hidden="true" />
       <div className="container">
-        <div className="hero-content">
-          <div className="hero-text">
-            <div className="hero-status-pill">
-              <span className="status-dot" aria-hidden="true" />
-              <span>CSE Undergraduate @ UIU · Open to Internships &amp; Collaborations</span>
-            </div>
-
-            <h1 className="hero-title">
-              Hi, I&apos;m <span className="highlight-name">Abrar Junaed</span>
-              <span className="hero-title-sub">
-                Building Full-Stack Web, 3D &amp; Applied AI Systems.
-              </span>
-            </h1>
-
-            <p className="hero-description">
-              Computer Science &amp; Engineering student at{' '}
-              <strong>United International University (UIU)</strong> passionate about clean software
-              architecture—from type-safe <strong>React &amp; Next.js</strong> interfaces and{' '}
-              <strong>Three.js</strong> 3D customizers to <strong>Spring Boot &amp; NestJS</strong>{' '}
-              APIs, computer vision, and robotics.
+        <div className="hero-grid">
+          <div className="hero-main">
+            <p className="hero-kicker">
+              Dhaka, Bangladesh · Computer Science &amp; Engineering at UIU
             </p>
 
-            <div className="hero-tags" aria-label="Primary technologies">
-              <span>TypeScript</span>
-              <span>Next.js 16</span>
-              <span>React 19</span>
-              <span>Spring Boot 3</span>
-              <span>NestJS</span>
-              <span>Three.js</span>
-              <span>PostgreSQL</span>
-              <span>Gemini API</span>
-            </div>
+            <h1 className="hero-title">
+              Abrar Junaed
+            </h1>
+
+            <p className="hero-lead">
+              Undergraduate software developer building full-stack web applications, interactive 3D
+              browser tools, structured backend APIs, and computer vision projects.
+            </p>
 
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">
-                <span>View Projects</span>
-                <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+                <span>Selected Work</span>
+                <i className="fa-solid fa-arrow-down" aria-hidden="true" />
               </a>
               <a
                 href="https://github.com/Abrar2212"
@@ -50,67 +31,32 @@ const Hero = () => {
                 className="btn btn-secondary"
               >
                 <i className="fa-brands fa-github" aria-hidden="true" />
-                <span>GitHub @Abrar2212</span>
+                <span>GitHub</span>
               </a>
               <a href="mailto:abrarjunaed22@gmail.com" className="btn btn-secondary">
-                <i className="fa-solid fa-envelope" aria-hidden="true" />
-                <span>Email Me</span>
+                <span>abrarjunaed22@gmail.com</span>
               </a>
             </div>
-
-            <div className="hero-metrics" aria-label="Portfolio summary">
-              <div className="metric-item">
-                <span className="metric-value">9</span>
-                <span className="metric-label">Software &amp; AI Projects</span>
-              </div>
-              <div className="metric-divider" aria-hidden="true" />
-              <div className="metric-item">
-                <span className="metric-value">5</span>
-                <span className="metric-label">Core Tech Domains</span>
-              </div>
-              <div className="metric-divider" aria-hidden="true" />
-              <div className="metric-item">
-                <span className="metric-value">UIU</span>
-                <span className="metric-label">B.Sc. in CSE (Dhaka)</span>
-              </div>
-            </div>
           </div>
 
-          <div className="hero-visual">
-            <div className="hero-terminal" aria-label="Developer profile overview in TypeScript">
-              <div className="terminal-bar">
-                <div className="terminal-dots" aria-hidden="true">
-                  <span className="dot-red" />
-                  <span className="dot-amber" />
-                  <span className="dot-green" />
-                </div>
-                <span className="terminal-title">abrar@uiu:~/profile.ts</span>
-                <span className="terminal-lang">TS</span>
-              </div>
-              <pre className="terminal-code">
-                <code>
-{`const developer = {
-  name: "Abrar Junaed",
-  education: "B.Sc. in CSE @ UIU",
-  location: "Dhaka, Bangladesh",
-
-  frontend: ["React 19", "Next.js 16", "Three.js"],
-  backend:  ["Spring Boot 3", "NestJS", "Express"],
-  data:     ["PostgreSQL", "MySQL", "Prisma"],
-  ai_cv:    ["Gemini VLM", "OpenCV", "Python"],
-
-  currentFocus: "Assistive Vision AI (FYDP)"
-};`}
-                </code>
-              </pre>
-              <div className="terminal-footer">
-                <span>
-                  <i className="fa-solid fa-code-branch" aria-hidden="true" /> main
-                </span>
-                <span>UTF-8 · TypeScript 5</span>
-              </div>
+          <aside className="hero-spec" aria-label="Current overview">
+            <div className="spec-row">
+              <span className="spec-label">Degree</span>
+              <span className="spec-value">B.Sc. in CSE, United International University</span>
             </div>
-          </div>
+            <div className="spec-row">
+              <span className="spec-label">Web &amp; 3D</span>
+              <span className="spec-value">TypeScript, Next.js 16, React 19, Three.js</span>
+            </div>
+            <div className="spec-row">
+              <span className="spec-label">Backend</span>
+              <span className="spec-value">Spring Boot 3, NestJS, Node.js, PostgreSQL</span>
+            </div>
+            <div className="spec-row">
+              <span className="spec-label">Research</span>
+              <span className="spec-value">Assistive Vision-Language AI (FYDP)</span>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
