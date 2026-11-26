@@ -7,7 +7,7 @@ const skillGroups = [
     title: 'Languages',
     icon: 'fa-solid fa-code',
     items: [
-      { name: 'TypeScript 5', icon: 'fa-solid fa-file-code' },
+      { name: 'TypeScript', icon: 'fa-solid fa-file-code' },
       { name: 'JavaScript (ES6+)', icon: 'fa-brands fa-js' },
       { name: 'Java 21', icon: 'fa-brands fa-java' },
       { name: 'Python', icon: 'fa-brands fa-python' },
@@ -35,7 +35,7 @@ const skillGroups = [
   },
   {
     id: 'backend',
-    title: 'Backend & API Architecture',
+    title: 'Backend & APIs',
     icon: 'fa-solid fa-server',
     items: [
       { name: 'Spring Boot 3', icon: 'fa-solid fa-seedling' },
@@ -50,7 +50,7 @@ const skillGroups = [
   },
   {
     id: 'cloud',
-    title: 'Databases, Cloud & DevOps',
+    title: 'Databases, Cloud & Tooling',
     icon: 'fa-solid fa-cloud',
     items: [
       { name: 'PostgreSQL', icon: 'fa-solid fa-database' },
@@ -71,7 +71,7 @@ const skillGroups = [
     icon: 'fa-solid fa-brain',
     items: [
       { name: 'Google Gemini API (VLMs)', icon: 'fa-solid fa-wand-sparkles' },
-      { name: 'Multi-Agent Pipelines', icon: 'fa-solid fa-sitemap' },
+      { name: 'Multi-Agent Workflows', icon: 'fa-solid fa-sitemap' },
       { name: 'OpenCV (ArUco & Video)', icon: 'fa-solid fa-eye' },
       { name: 'Scikit-Learn', icon: 'fa-solid fa-chart-line' },
       { name: 'NumPy & Pandas', icon: 'fa-solid fa-table' },
@@ -90,17 +90,20 @@ const Tools = () => {
       : skillGroups.filter((group) => group.id === activeCategory);
 
   return (
-    <section id="tools" className="skills tools-section-wrapper">
+    <section id="tools" className="skills">
       <div className="container">
         <div className="tools-header">
-          <h2 className="section-title">Tech Stack &amp; Engineering Arsenal</h2>
+          <span className="section-eyebrow">// 02 · Tech Stack</span>
+          <h2 className="section-title">Languages, Frameworks &amp; Developer Tooling</h2>
           <p className="section-subtitle">
-            Languages, frameworks, cloud infrastructure, and AI/vision tooling I use across production and research systems.
+            Technologies used across my full-stack web applications, 3D customization tools, academic systems, and AI/robotics projects.
           </p>
 
           <div className="tools-filter-bar" role="tablist" aria-label="Filter skills by domain">
             <button
               type="button"
+              role="tab"
+              aria-selected={activeCategory === 'all'}
               className={`filter-pill ${activeCategory === 'all' ? 'active' : ''}`}
               onClick={() => setActiveCategory('all')}
             >
@@ -110,6 +113,8 @@ const Tools = () => {
               <button
                 key={group.id}
                 type="button"
+                role="tab"
+                aria-selected={activeCategory === group.id}
                 className={`filter-pill ${activeCategory === group.id ? 'active' : ''}`}
                 onClick={() => setActiveCategory(group.id)}
               >
@@ -123,15 +128,15 @@ const Tools = () => {
           {visibleGroups.map((group) => (
             <div key={group.id} className="skill-domain-card">
               <div className="skill-domain-header">
-                <span className="skill-domain-icon">
-                  <i className={group.icon} aria-hidden="true" />
+                <span className="skill-domain-icon" aria-hidden="true">
+                  <i className={group.icon} />
                 </span>
                 <h3 className="tools-title">{group.title}</h3>
               </div>
               <div className="tools-grid">
                 {group.items.map((tool) => (
-                  <div key={tool.name} className="tool-chip" title={tool.name}>
-                    <i className={`${tool.icon} tool-icon`} aria-hidden="true"></i>
+                  <div key={tool.name} className="tool-chip">
+                    <i className={`${tool.icon} tool-icon`} aria-hidden="true" />
                     <span className="tool-name">{tool.name}</span>
                   </div>
                 ))}

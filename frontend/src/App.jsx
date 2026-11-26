@@ -2,10 +2,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Tools from './components/Tools';
 import Projects from './components/Projects';
 import Education from './components/Education';
-import Skills from './components/Skills';
-import Tools from './components/Tools';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -21,7 +20,6 @@ function App() {
           <Tools />
           <Projects />
           <Education />
-          <Skills />
           <Contact />
         </main>
         <Footer />

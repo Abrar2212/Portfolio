@@ -1,133 +1,113 @@
-import { useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && typeof window.anime !== 'undefined') {
-      const shapes = document.querySelectorAll('.shape');
-
-      shapes.forEach((shape) => {
-        const animateShape = () => {
-          window.anime({
-            targets: shape,
-            translateX: window.anime.random(-95, 95),
-            translateY: window.anime.random(-95, 95),
-            rotate: window.anime.random(-160, 160),
-            duration: window.anime.random(5200, 8500),
-            easing: 'easeInOutQuad',
-            delay: window.anime.random(200, 700),
-            complete: () => {
-              setTimeout(animateShape, window.anime.random(250, 700));
-            }
-          });
-        };
-        animateShape();
-      });
-    }
-  }, []);
-
   return (
     <section id="home" className="hero">
+      <div className="hero-ambient" aria-hidden="true" />
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
             <div className="hero-status-pill">
               <span className="status-dot" aria-hidden="true" />
-              <span>Open to Collaboration &amp; Full-Stack Roles</span>
+              <span>CSE Undergraduate @ UIU · Open to Internships &amp; Collaborations</span>
             </div>
 
-            <a href="mailto:abrarjunaed22@gmail.com" className="hero-greeting">
-              abrarjunaed22@gmail.com
-            </a>
-
             <h1 className="hero-title">
-              <span className="title-line">Hey There,</span>
-              <span className="title-line">
-                I&apos;m <span className="highlight-name">Abrar Junaed</span>
+              Hi, I&apos;m <span className="highlight-name">Abrar Junaed</span>
+              <span className="hero-title-sub">
+                Building Full-Stack Web, 3D &amp; Applied AI Systems.
               </span>
             </h1>
 
             <p className="hero-description">
-              <strong>Full-Stack Software Engineer</strong> &amp; CSE Undergraduate at{' '}
-              <strong>UIU</strong> — architecting type-safe web platforms, scalable backend APIs,
-              interactive <strong>3D web experiences</strong>, and multimodal <strong>AI &amp; vision systems</strong>.
+              Computer Science &amp; Engineering student at{' '}
+              <strong>United International University (UIU)</strong> passionate about clean software
+              architecture—from type-safe <strong>React &amp; Next.js</strong> interfaces and{' '}
+              <strong>Three.js</strong> 3D customizers to <strong>Spring Boot &amp; NestJS</strong>{' '}
+              APIs, computer vision, and robotics.
             </p>
 
-            <div className="hero-tags">
+            <div className="hero-tags" aria-label="Primary technologies">
               <span>TypeScript</span>
               <span>Next.js 16</span>
+              <span>React 19</span>
               <span>Spring Boot 3</span>
               <span>NestJS</span>
-              <span>Three.js / R3F</span>
-              <span>Gemini AI</span>
+              <span>Three.js</span>
               <span>PostgreSQL</span>
+              <span>Gemini API</span>
             </div>
 
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">
-                Explore Projects
+                <span>View Projects</span>
+                <i className="fa-solid fa-arrow-right" aria-hidden="true" />
               </a>
               <a
                 href="https://github.com/Abrar2212"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary hero-gh-btn"
+                className="btn btn-secondary"
               >
-                <i className="fa-brands fa-github" aria-hidden="true" /> GitHub Profile
+                <i className="fa-brands fa-github" aria-hidden="true" />
+                <span>GitHub @Abrar2212</span>
+              </a>
+              <a href="mailto:abrarjunaed22@gmail.com" className="btn btn-secondary">
+                <i className="fa-solid fa-envelope" aria-hidden="true" />
+                <span>Email Me</span>
               </a>
             </div>
 
-            <div className="hero-stats">
-              <div className="hero-stat-block">
-                <div className="stat-number">2+</div>
-                <div className="stat-label">
-                  Years<br />Building
-                </div>
+            <div className="hero-metrics" aria-label="Portfolio summary">
+              <div className="metric-item">
+                <span className="metric-value">9</span>
+                <span className="metric-label">Software &amp; AI Projects</span>
               </div>
-              <div className="hero-stat-divider" aria-hidden="true" />
-              <div className="hero-stat-block">
-                <div className="stat-number">9+</div>
-                <div className="stat-label">
-                  Engineered<br />Systems
-                </div>
+              <div className="metric-divider" aria-hidden="true" />
+              <div className="metric-item">
+                <span className="metric-value">5</span>
+                <span className="metric-label">Core Tech Domains</span>
               </div>
-              <div className="stat-note">
-                <div className="note-line">FULL-STACK &amp; BACKEND</div>
-                <div className="note-line">3D WEB · APPLIED AI</div>
+              <div className="metric-divider" aria-hidden="true" />
+              <div className="metric-item">
+                <span className="metric-value">UIU</span>
+                <span className="metric-label">B.Sc. in CSE (Dhaka)</span>
               </div>
             </div>
           </div>
 
-          <div className="hero-image">
-            <div className="image-container">
-              <div className="shape shape-1"></div>
-              <div className="shape shape-2"></div>
-              <div className="shape shape-3"></div>
-              <div className="shape shape-4"></div>
-              <div className="shape shape-5"></div>
-
-              <div className="hero-terminal" aria-label="Developer profile code snippet">
-                <div className="terminal-bar">
-                  <div className="terminal-dots">
-                    <span className="dot-red" />
-                    <span className="dot-amber" />
-                    <span className="dot-green" />
-                  </div>
-                  <span className="terminal-title">abrar@uiu:~/profile.ts</span>
+          <div className="hero-visual">
+            <div className="hero-terminal" aria-label="Developer profile overview in TypeScript">
+              <div className="terminal-bar">
+                <div className="terminal-dots" aria-hidden="true">
+                  <span className="dot-red" />
+                  <span className="dot-amber" />
+                  <span className="dot-green" />
                 </div>
-                <pre className="terminal-code">
-                  <code>
-{`const engineer = {
-  role: "Full-Stack & AI",
-  web:  ["Next.js 16", "React 19"],
-  api:  ["Spring Boot 3", "NestJS"],
-  gfx:  "Three.js / STL Studio",
-  ai:   ["Gemini VLM", "OpenCV"],
-  db:   ["PostgreSQL", "Prisma"],
-  ship: true
+                <span className="terminal-title">abrar@uiu:~/profile.ts</span>
+                <span className="terminal-lang">TS</span>
+              </div>
+              <pre className="terminal-code">
+                <code>
+{`const developer = {
+  name: "Abrar Junaed",
+  education: "B.Sc. in CSE @ UIU",
+  location: "Dhaka, Bangladesh",
+
+  frontend: ["React 19", "Next.js 16", "Three.js"],
+  backend:  ["Spring Boot 3", "NestJS", "Express"],
+  data:     ["PostgreSQL", "MySQL", "Prisma"],
+  ai_cv:    ["Gemini VLM", "OpenCV", "Python"],
+
+  currentFocus: "Assistive Vision AI (FYDP)"
 };`}
-                  </code>
-                </pre>
+                </code>
+              </pre>
+              <div className="terminal-footer">
+                <span>
+                  <i className="fa-solid fa-code-branch" aria-hidden="true" /> main
+                </span>
+                <span>UTF-8 · TypeScript 5</span>
               </div>
             </div>
           </div>

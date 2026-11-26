@@ -1,84 +1,77 @@
 import './About.css';
 
-const About = () => {
-  const services = [
-    {
-      iconClass: 'fa-solid fa-cubes',
-      title: 'Full-Stack & 3D Web Systems',
-      count: 'Next.js 16 · React 19 · Three.js / STL',
-      color: '#14b8a6'
-    },
-    {
-      iconClass: 'fa-solid fa-server',
-      title: 'Backend & API Architecture',
-      count: 'Spring Boot 3 · NestJS · Express 5',
-      color: '#6366f1'
-    },
-    {
-      iconClass: 'fa-solid fa-database',
-      title: 'Databases, ORM & Cloud',
-      count: 'PostgreSQL · Prisma · MySQL · Firebase',
-      color: '#f59e0b'
-    },
-    {
-      iconClass: 'fa-solid fa-brain',
-      title: 'Applied AI, Vision & Robotics',
-      count: 'Gemini VLMs · OpenCV · Raspberry Pi 5',
-      color: '#ec4899'
-    }
-  ];
+const domains = [
+  {
+    iconClass: 'fa-solid fa-cubes',
+    title: 'Full-Stack & 3D Web',
+    summary: 'Interactive React 19 & Next.js 16 web apps, Three.js 3D previews, procedural STL export, and WordPress plugin integration.',
+    accent: '#2563EB'
+  },
+  {
+    iconClass: 'fa-solid fa-server',
+    title: 'Backend & REST APIs',
+    summary: 'Structured backend services using Spring Boot 3 (Java 21), NestJS, Node.js, and Express with JWT & OAuth 2.0 authentication.',
+    accent: '#0891B2'
+  },
+  {
+    iconClass: 'fa-solid fa-database',
+    title: 'Databases & Cloud Storage',
+    summary: 'Relational and document data modeling with PostgreSQL, MySQL, MongoDB, Prisma ORM, Firebase Firestore, and Cloudinary.',
+    accent: '#7C3AED'
+  },
+  {
+    iconClass: 'fa-solid fa-microchip',
+    title: 'Applied AI, Vision & Robotics',
+    summary: 'Vision-language pipelines with Google Gemini API & OpenCV, AI research agents, and Raspberry Pi + Arduino robotics.',
+    accent: '#10B981'
+  }
+];
 
+const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
+        <div className="about-header">
+          <span className="section-eyebrow">// 01 · About Me</span>
+          <h2 className="section-title">Focused on Clean Architecture &amp; Practical Problem Solving</h2>
+        </div>
+
         <div className="about-content">
-          <div className="about-services">
-            {services.map((service) => (
-              <div key={service.title} className="service-card">
-                <div className="service-icon" style={{ backgroundColor: service.color }}>
-                  <i className={service.iconClass} aria-hidden="true" />
-                </div>
-                <div>
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-count">{service.count}</p>
-                </div>
-              </div>
-            ))}
+          <div className="about-narrative">
+            <p className="description-text">
+              I&apos;m <strong>Abrar Junaed</strong>, an undergraduate studying{' '}
+              <strong>Computer Science &amp; Engineering at United International University (UIU)</strong>{' '}
+              in Dhaka, Bangladesh. I enjoy turning complex ideas into well-structured, maintainable
+              software across both frontend and backend stacks.
+            </p>
+            <p className="description-text">
+              My recent projects span custom <strong>3D web customization platforms</strong> with{' '}
+              <strong>Next.js 16 and Three.js</strong>, gamified learning systems built on{' '}
+              <strong>Spring Boot 3 and React</strong>, peer-to-peer skill exchange communities, and
+              full-stack inventory management dashboards.
+            </p>
+            <p className="description-text">
+              Alongside web engineering, my Final Year Design Project (FYDP) explores{' '}
+              <strong>Calibrated Non-Visual Confidence Communication</strong> for assistive smart-glass
+              memory recall using <strong>Google Gemini Vision-Language Models</strong> and{' '}
+              <strong>OpenCV</strong>, complemented by hands-on hardware integration with{' '}
+              <strong>Raspberry Pi 5 and Arduino</strong>.
+            </p>
           </div>
 
-          <div className="about-description">
-            <h2 className="section-title">Engineering Clean, Scalable &amp; Intelligent Systems</h2>
-            <p className="description-text">
-              I&apos;m <strong>Abrar Junaed</strong>, a Computer Science &amp; Engineering undergraduate at{' '}
-              <strong>United International University (UIU)</strong> focused on building resilient,
-              end-to-end software products from relational database schemas to zero-latency user interfaces.
-            </p>
-            <p className="description-text">
-              Across the stack, I build interactive 3D web studios and e-commerce platforms with{' '}
-              <strong>TypeScript, Next.js 16, React 19, and Three.js (R3F)</strong>, alongside secure,
-              modular backends powered by <strong>Spring Boot 3 (Java 21), NestJS, Node.js, Express 5, Prisma, and PostgreSQL</strong>.
-            </p>
-            <p className="description-text">
-              Beyond web engineering, my current Final Year Design Project (FYDP) researches{' '}
-              <strong>Calibrated Non-Visual Confidence Communication</strong> for assistive smart-glass memory
-              recall using <strong>Google Gemini Vision-Language Models</strong> and <strong>OpenCV</strong>,
-              complemented by hands-on work in multi-agent AI pipelines and vision-guided robotics.
-            </p>
-
-            <div className="about-stats">
-              <div className="stat-box">
-                <div className="stat-number">9+</div>
-                <div className="stat-label">Full-Stack &amp; AI Projects</div>
+          <div className="about-domains-grid">
+            {domains.map((domain) => (
+              <div key={domain.title} className="domain-bento-card">
+                <div
+                  className="domain-icon"
+                  style={{ backgroundColor: `${domain.accent}18`, color: domain.accent }}
+                >
+                  <i className={domain.iconClass} aria-hidden="true" />
+                </div>
+                <h3 className="domain-title">{domain.title}</h3>
+                <p className="domain-summary">{domain.summary}</p>
               </div>
-              <div className="stat-box">
-                <div className="stat-number">5</div>
-                <div className="stat-label">Engineering Domains</div>
-              </div>
-              <div className="stat-box">
-                <div className="stat-number">&lt;60ms</div>
-                <div className="stat-label">API &amp; Optimistic UX Target</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

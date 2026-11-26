@@ -2,36 +2,25 @@
 
 Live Site: **https://portfolio-coral-kappa.vercel.app**
 
-A responsive, theme-aware developer portfolio showcasing full-stack web engineering, interactive 3D web platforms, enterprise backend systems, and applied AI/vision research.
+A responsive, accessible dark/light developer portfolio built with React 19 and Vite, designed with the **UI/UX Pro Max** token system (`Space Grotesk`, `DM Sans`, and `JetBrains Mono`).
 
-## Highlights
+## Features
 
-- **System-Synced Dark & Light Mode**: Automatic OS color-scheme detection with persistent manual toggle.
-- **Interactive Hero & Developer Terminal**: Status indicator, floating ambient geometry (`anime.js`), and syntax-styled engineering profile card.
-- **5-Domain Categorized Tech Arsenal**: Filterable skill domains covering Languages, Frontend/3D/Motion, Backend/APIs, Databases/Cloud/DevOps, and Applied AI/Vision/Robotics.
-- **9 Featured Engineering Systems**: Filterable project showcase with live demos and source links (**PrintX3D**, **LearnMatrix**, **Skill Binimoy**, **Starry-Wrap**, **Non-Visual Confidence Recall**, **Autonomous Service Robot**, **Scholarship Scout**, **Qasar**, and **Home Hunt**).
-- **Serverless & Express Contact API**: Integrated `/api/contact` endpoint for direct messaging.
-
-## Tech Stack
-
-- **Frontend**: React 19, Vite, CSS Custom Properties, Font Awesome 6, Anime.js
-- **Backend / Serverless API**: Node.js, Express, Vercel Serverless Functions (`/api/contact`, `/api/health`)
+- **Custom Vector Sun/Moon Theme Switch**: Accessible `role="switch"` sliding toggle with OS theme synchronization and local persistence.
+- **UI/UX Pro Max Semantic Tokens**: Verified WCAG AA (`>= 4.5:1`) contrast across both Light (Slate/Royal Blue) and Dark (Midnight Tokyo-Slate) modes, visible `:focus-visible` outlines, and `prefers-reduced-motion` support.
+- **5-Domain Categorized Tech Stack**: Filterable skill grid covering Languages, Frontend/3D/Motion, Backend/APIs, Databases/Cloud/Tooling, and Applied AI/Vision/Robotics.
+- **9 Selected Software & Hardware Projects**: Filterable project showcase with live demo and GitHub source links.
+- **Academic Background & Capstone Research**: UIU CSE timeline and Final Year Design Project (FYDP) overview.
 
 ## Local Development
 
 ```bash
-# Frontend
 cd frontend
 npm install
 npm run dev
-
-# Backend (optional local Express server)
-cd backend
-npm install
-npm start
 ```
 
-## Production Build
+## Lint & Production Build
 
 ```bash
 cd frontend
