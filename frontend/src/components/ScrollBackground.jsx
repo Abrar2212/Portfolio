@@ -314,12 +314,15 @@ const ScrollBackground = () => {
   }, [theme]);
 
   return (
-    <div className="scroll-bg-root" aria-hidden="true">
-      <div className="scroll-progress-track">
+    <>
+      {/* outside .scroll-bg-root: that layer sits below <main>, so cards would cover the bar */}
+      <div className="scroll-progress-track" aria-hidden="true">
         <div ref={progressBarRef} className="scroll-progress-bar" />
       </div>
-      <canvas ref={canvasRef} className="scroll-bg-canvas" />
-    </div>
+      <div className="scroll-bg-root" aria-hidden="true">
+        <canvas ref={canvasRef} className="scroll-bg-canvas" />
+      </div>
+    </>
   );
 };
 

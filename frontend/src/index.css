@@ -120,3 +120,81 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Motion: skipped entirely for reduced-motion users */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-main > *,
+  .hero-spec {
+    animation: hero-in 0.8s var(--ease-out) both;
+  }
+  .hero-main > :nth-child(2) { animation-delay: 0.08s; }
+  .hero-main > :nth-child(3) { animation-delay: 0.16s; }
+  .hero-main > :nth-child(4) { animation-delay: 0.24s; }
+  .hero-main > :nth-child(5) { animation-delay: 0.32s; }
+  .hero-spec { animation-delay: 0.4s; }
+
+  /* shortcut: scroll-driven CSS has no Firefox support yet; there content just appears without animating */
+  @supports (animation-timeline: view()) {
+    .hero-grid {
+      animation: hero-out linear both;
+      animation-timeline: scroll();
+      animation-range: 0 90vh;
+    }
+
+    .section-index,
+    .section-title,
+    .section-subtitle,
+    .description-text,
+    .domain-card,
+    .stack-row,
+    .projects-filter-bar,
+    .project-card,
+    .education-item,
+    .focus-item,
+    .contact-info,
+    .contact-form {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+
+    /* slide direction, read by the reveal-up keyframes */
+    .description-text,
+    .stack-row,
+    .education-item,
+    .contact-info,
+    .project-card:nth-child(odd) {
+      --rx: -72px;
+      --ry: 0px;
+    }
+
+    .domain-card,
+    .focus-item,
+    .contact-form,
+    .project-card:nth-child(even) {
+      --rx: 72px;
+      --ry: 0px;
+    }
+
+    .section-title {
+      animation-name: reveal-wipe;
+    }
+  }
+}
+
+@keyframes reveal-wipe {
+  from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(60%); }
+  to { opacity: 1; clip-path: inset(0); transform: none; }
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(24px); }
+}
+
+@keyframes hero-out {
+  to { opacity: 0; transform: translateY(-80px) scale(0.97); }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translate(var(--rx, 0px), var(--ry, 48px)) scale(0.98); }
+}

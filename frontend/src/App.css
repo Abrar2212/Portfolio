@@ -8,6 +8,7 @@ main {
   flex: 1;
   position: relative;
   z-index: 1;
+  overflow-x: clip; /* side-slide reveals must not cause horizontal scroll; clip keeps view() timelines working */
 }
 
 .container {

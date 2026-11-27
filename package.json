@@ -3,15 +3,8 @@
   "version": "1.0.0",
   "description": "Full Stack Portfolio",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "npm run build && node backend/server.js",
-    "server": "cd backend && npm run dev",
-    "client": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build",
-    "vercel-build": "npm --prefix frontend ci && npm --prefix frontend run build",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "vercel-build": "npm --prefix frontend ci && npm --prefix frontend run build"
   }
 }

@@ -1,23 +1,25 @@
 import './Hero.css';
 
+const stats = [
+  ['09', 'Projects built'],
+  ['02', 'Live apps'],
+  ['3.50', 'CGPA at UIU'],
+  ['05', 'Tech domains']
+];
+
 const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-grid">
           <div className="hero-main">
-            <p className="hero-kicker">
-              Dhaka, Bangladesh · Computer Science &amp; Engineering at UIU
-            </p>
+            <p className="hero-kicker">CSE @ UIU · Dhaka</p>
 
             <h1 className="hero-title">
               Abrar Junaed
             </h1>
 
-            <p className="hero-lead">
-              Undergraduate software developer building full-stack web applications, interactive 3D
-              browser tools, structured backend APIs, and computer vision projects.
-            </p>
+            <p className="hero-lead">Full-stack developer building web apps, 3D tools and AI projects.</p>
 
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">
@@ -33,32 +35,48 @@ const Hero = () => {
                 <i className="fa-brands fa-github" aria-hidden="true" />
                 <span>GitHub</span>
               </a>
-              <a href="mailto:abrarjunaed22@gmail.com" className="btn btn-secondary">
-                <span>abrarjunaed22@gmail.com</span>
-              </a>
             </div>
+
+            <dl className="hero-stats">
+              {stats.map(([value, label]) => (
+                <div key={label} className="hero-stat">
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <aside className="hero-spec" aria-label="Current overview">
             <div className="spec-row">
-              <span className="spec-label">Degree</span>
-              <span className="spec-value">B.Sc. in CSE, United International University</span>
+              <span className="spec-label">
+                <span className="live-dot" aria-hidden="true" />
+                Now
+              </span>
+              <span className="spec-value">
+                Final-year project: assistive memory AI for blind users
+              </span>
             </div>
             <div className="spec-row">
-              <span className="spec-label">Web &amp; 3D</span>
-              <span className="spec-value">TypeScript, Next.js 16, React 19, Three.js</span>
+              <span className="spec-label">Frontend</span>
+              <span className="spec-value">React, Next.js, Three.js</span>
             </div>
             <div className="spec-row">
               <span className="spec-label">Backend</span>
-              <span className="spec-value">Spring Boot 3, NestJS, Node.js, PostgreSQL</span>
+              <span className="spec-value">Spring Boot, NestJS, PostgreSQL</span>
             </div>
             <div className="spec-row">
-              <span className="spec-label">Research</span>
-              <span className="spec-value">Assistive Vision-Language AI (FYDP)</span>
+              <span className="spec-label">AI &amp; Vision</span>
+              <span className="spec-value">Python, OpenCV, Gemini API</span>
             </div>
           </aside>
         </div>
       </div>
+
+      <a href="#about" className="hero-scroll" aria-label="Scroll to About">
+        <span>Scroll</span>
+        <span className="hero-scroll-line" aria-hidden="true" />
+      </a>
     </section>
   );
 };

@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   height: 1.5px;
-  z-index: 1001;
+  z-index: 997; /* above page content, below the mobile menu (998/999) */
   pointer-events: none;
   background: transparent;
 }
