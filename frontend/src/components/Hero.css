@@ -40,8 +40,8 @@
 
 .hero-stat dt {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
 .live-dot {
@@ -145,7 +145,7 @@
 
 .spec-row {
   display: grid;
-  grid-template-columns: 92px 1fr;
+  grid-template-columns: 104px 1fr;
   gap: 1rem;
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--border-color);
@@ -154,8 +154,8 @@
 
 .spec-label {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--text-muted);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
   padding-top: 0.1rem;
 }
 

@@ -4,7 +4,14 @@ const stats = [
   ['09', 'Projects built'],
   ['02', 'Live apps'],
   ['3.50', 'CGPA at UIU'],
-  ['05', 'Tech domains']
+  ['40+', 'Technologies used']
+];
+
+const stack = [
+  ['Frontend', 'React, Next.js, Three.js'],
+  ['Backend', 'Spring Boot, NestJS, Node.js'],
+  ['Database', 'PostgreSQL, MySQL, MongoDB'],
+  ['AI / ML', 'Gemini API, OpenCV, Python']
 ];
 
 const Hero = () => {
@@ -47,28 +54,22 @@ const Hero = () => {
             </dl>
           </div>
 
-          <aside className="hero-spec" aria-label="Current overview">
+          <aside className="hero-spec" aria-label="Current work and tech stack">
             <div className="spec-row">
               <span className="spec-label">
                 <span className="live-dot" aria-hidden="true" />
-                Now
+                Currently
               </span>
               <span className="spec-value">
-                Final-year project: assistive memory AI for blind users
+                Final-year project: an AI memory assistant for blind users
               </span>
             </div>
-            <div className="spec-row">
-              <span className="spec-label">Frontend</span>
-              <span className="spec-value">React, Next.js, Three.js</span>
-            </div>
-            <div className="spec-row">
-              <span className="spec-label">Backend</span>
-              <span className="spec-value">Spring Boot, NestJS, PostgreSQL</span>
-            </div>
-            <div className="spec-row">
-              <span className="spec-label">AI &amp; Vision</span>
-              <span className="spec-value">Python, OpenCV, Gemini API</span>
-            </div>
+            {stack.map(([label, value]) => (
+              <div key={label} className="spec-row">
+                <span className="spec-label">{label}</span>
+                <span className="spec-value">{value}</span>
+              </div>
+            ))}
           </aside>
         </div>
       </div>
